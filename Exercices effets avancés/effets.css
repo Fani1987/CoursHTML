@@ -1,0 +1,110 @@
+* {
+  margin: 50;
+  padding: 20;
+}
+
+.hightlight-effect {
+  background-image: linear-gradient(45deg, #eeff00, #ee1212);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glowing 2s ease-in-out infinite;
+}
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.animated-element {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #00c8ff;
+  color: #ffffff;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+p {
+  all: revert;
+  border: medium solid;
+  font-size: 200%;
+  font-weight: bold;
+  color: red;
+  font-size: 16px;
+}
+
+em {
+  border: inherit;
+}
+
+.button {
+  margin: 20px;
+  padding: 10px;
+}
+.button:hover {
+  /* pseudo-classe "hover" effet de survol*/
+  background-color: green;
+  color: white;
+}
+
+.button:active {
+  /* pseudo-classe "active" effet de clic*/
+  background-color: blue;
+  color: white;
+}
+
+/* pseudo-classe "active" effet de clic*/
+.parallax-container {
+  perspective: 1000px;
+}
+
+.parallax-element {
+  transform: translateZ(-50px) scale(1.5);
+}
+
+.btn {
+  background: #011c37;
+  color: #15dea5;
+  font-size: 3rem;
+  cursor: pointer;
+  padding: 1.85rem 3rem;
+  border-radius: 10rem;
+  transition: transform 400ms;
+}
+.btn:hover {
+  transform: scale(1.15);
+}
+
+/* effets de progression */
+.btn:active > .progress__bar {
+  transform: scaleX(1);
+  animation-name: progress-bar;
+  animation-duration: 1000ms;
+}
+
+@keyframes progress-bar {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}

@@ -1,0 +1,24 @@
+.grid-container {
+  display: grid; /* Déclare un conteneur de grille */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(200px, 1fr)
+  ); /* Définit les colonnes de la grille */
+  grid-gap: 10px; /* Espacement entre les éléments de la grille */
+}
+
+.grid-item {
+  background-color: #ccc; /* Couleur de fond des éléments de la grille */
+  padding: 20px; /* Espacement intérieur des éléments de la grille */
+  text-align: center; /* Alignement du texte au centre des éléments de la grille */
+}
+
+@media screen and (max-width: 767px) {
+  /* Règles pour les écrans étroits avec une largeur maximale de 767 pixels */
+  .grid-container {
+    grid-template-columns: 1fr; /* Définit une seule colonne pour les écrans étroits */
+  }
+  .grid-item {
+    background-color: red; /* Couleur de fond des éléments de la grille pour les écrans étroits */
+  }
+}

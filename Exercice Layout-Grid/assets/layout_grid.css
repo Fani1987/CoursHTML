@@ -1,0 +1,13 @@
+/* Définition du conteneur de grille */
+.container {
+  display: grid; /* Active le mode grille */
+  grid-template-columns: repeat(2, 1fr); /* Deux colonnes de largeur égale */
+  grid-gap: 20px; /* Espacement de 20 pixels entre les éléments de la grille */
+  margin: 20px;
+}
+
+/* Style des éléments de la grille */
+.item {
+  background-color: #e5e5e5; /* Couleur de fond des éléments */
+  padding: 20px; /* Espacement intérieur de 20 pixels */
+}
